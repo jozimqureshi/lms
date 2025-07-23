@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { allExams } from "./data/sampleObjects";
+import { allExams } from "../services/getAllExams";
 
 const Exam = () => {
   const location = useLocation();

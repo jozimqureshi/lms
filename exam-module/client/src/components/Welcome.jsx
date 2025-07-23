@@ -1,8 +1,9 @@
 import React from "react";
 
-import { allExams, teacher } from './data/sampleObjects.js';
-
-
+// Logic for: Get Teeacher Name...
+const teacher = {
+    name : 'Dummy Name',
+};
 
 const Welcome = () => {
   return (

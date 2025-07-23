@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams} from "react-router-dom";
 
 import AllFetchedViewExams from "./AllFetchedViewExams";
-import { allExams } from './data/sampleObjects.js';
+import { allExams } from '../services/getAllExams';
 
-const examTypes = [...new Set(allExams.map((exam) => exam.examType))];
+let examTypes;
+
+(allExams) ? examTypes = [...new Set(allExams.map((exam) => exam.examType))] : examTypes = '';
 
 const ChooseExamTypes = (props) => {
   const [urlQuery, setUrlQuery] = useSearchParams(); // React uses useSearchParams to work with Query Strings

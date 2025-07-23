@@ -1,19 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { logoutHandler } from "../services/logout";
+import {
+  mockCredential as provision,
+  loginHandler,
+} from "../services/login.js";
 
-const Logout = () => {
+const Login = () => {
   const navigate = useNavigate();
 
   return (
     <>
       <a className="nav-link link-underline link-underline-hover cursor-pointer"
-        onClick={(e) => logoutHandler(e, navigate)}>
-        Logout
+        onClick={() => loginHandler(provision(), navigate)}>
+        Login
       </a>
     </>
   );
 };
 
-export default Logout;
+export default Login;

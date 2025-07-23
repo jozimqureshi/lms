@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from "./LoginButton";
 
 const Home = (props) => {
   return (
@@ -9,19 +10,9 @@ const Home = (props) => {
           <h4>This is {props.title} Page</h4>
           <h5>Welcome to the Exam Module!</h5>
           <h6>
-            The work is under progress! New exciting features will be coming
-            soon!
+            The work is under progress! New exciting features is coming soon!
           </h6>
-          <p>
-            Please go to{" "}
-            <Link
-              className="nav-item link-underline-none link-underline-hover"
-              to="view-exams"
-            >
-              View Exams
-            </Link>{" "}
-            to proceed...
-          </p>
+          <Login /> {/* Slicing */}
         </div>
       </div>
     </>

@@ -16,11 +16,19 @@ const ViewExams = (props) => {
           </div>
         </div>
         {/* Routing  */}
-
         <Routes>
           <Route index element={<ChooseExamTypes />} />
           <Route path="/exam" element={<Exam />} />
         </Routes>
+        {/* The index prop defines the default child route for a parent route in
+        React Router v6+. In the above case: When user visits /view-exams, they
+        see ChooseExamTypes When user visits /view-exams/exam, they see Exam
+        index means: this is the default child route when the parent path is
+        matched exactly Without index, you'd need:
+        <Route path="" element={<ChooseExamTypes />} />
+        But index is clearer and preferred for default rendering. When to Use
+        index: You want a default route for a nested path (like a dashboard home
+        or default tab) You don't want to repeat path="" or path duplication */}
       </div>
     </>
   );

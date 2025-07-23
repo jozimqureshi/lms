@@ -1,15 +1,16 @@
-import './App.css';
+import "./App.css";
 
 // import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
-import AllExams from "./components/ViewExams";
+// import AllExams from "./components/ViewExams";
 import NewExam from "./components/NewExam";
 import Footer from "./components/Footer";
-import ViewExams from './components/ViewExams';
-import Welcome from './components/Welcome';
+import ViewExams from "./components/ViewExams";
+import Welcome from "./components/Welcome";
+import ProtectedRoute from "./components/ProtectedRoute"; // To check authentication
 
 const strTitle = "Title by Prop: ";
 // const location = useLocation();
@@ -27,20 +28,32 @@ function App() {
         </header>
         <main className="flex-grow-1 py-4">
           <div className="container">
-
-          <Welcome />
+            <Welcome />
 
             {/* Routing */}
             <Routes>
-              <Route path="/"
-              element={<Home title="Home" />} />
+              <Route path="/" element={<Home title="Home" />} />
+
+              {/* All Exams related Routes are needed to be wrapped up within ProtectedRoute in order to view the Exams and their sub-components to login/authenticated users only  */}
+
+              {/* Protected Route */}
               <Route
                 path="/view-exams/*"
-                element={<ViewExams title="View Exams" />}
+                element={
+                  <ProtectedRoute>
+                    <ViewExams title="View Exams" />
+                  </ProtectedRoute>
+                }
               />
+
+              {/* Protected Route */}
               <Route
                 path="/new-exam"
-                element={<NewExam title="New Exam" />}
+                element={
+                  <ProtectedRoute>
+                    <NewExam title="New Exam" />
+                  </ProtectedRoute>
+                }
               />
             </Routes>
           </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Logout from "./Logout";
+import ToggleLogin from "./LoginPanel";
 
 const NavItems = () => {
   return (
@@ -41,7 +41,7 @@ const NavItems = () => {
       */}
         </ul>
         {/* Right Side Nav */}
-        <Logout /> {/* Slicing */}
+        <ToggleLogin /> {/* Slicing */}
       </div>
     </>
   );

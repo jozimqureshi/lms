@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { allExams } from "./data/sampleObjects.js";
+import { allExams } from "../services/getAllExams";
 
 const AllFetchedViewExams = (props) => {
   // const [searchParams] = useSearchParams(); // React uss useSearchParams to work with Query Strings
