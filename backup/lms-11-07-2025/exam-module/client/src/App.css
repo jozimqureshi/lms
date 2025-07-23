@@ -1,0 +1,17 @@
+/* App.css */
+
+.link-underline-hover:hover {
+  text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.select-custom {
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+  min-width: 150px;
+  max-width: 250px;
+  margin: auto;
+}

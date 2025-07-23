@@ -1,0 +1,151 @@
+[{
+  "_id": {
+    "$oid": "686660b9bad2d2d895fe3a9e"
+  },
+  "instructor_id": {
+    "$oid": "64f7a9e2b5a6d3c1f0c9e123"
+  },
+  "course_id": {
+    "$oid": "64f7a9e2b5a6d3c1f0c9e456"
+  },
+  "instructions_id": {
+    "$oid": "64fdc8a2b9a1f0c3e4d7a1b2"
+  },
+  "examType": "Final",
+  "subject": "Database Systems",
+  "questions": [
+    {
+      "_id": {
+        "$oid": "64f7a9e2b5a6d3c1f0c9e789"
+      },
+      "isStandAlone": true,
+      "isSubQuestion": false,
+      "questionType": "Normal",
+      "query": "Define Normalization with example",
+      "questionNumber": 1,
+      "displayType": "Descriptive",
+      "clo": "clo_sample_1",
+      "marks": 1
+    },
+    {
+      "_id": {
+        "$oid": "66a001a9bad2d2d895fe3abc"
+      },
+      "isStandAlone": false,
+      "isParent": true,
+      "isSubQuestion": false,
+      "questionType": "MCQ",
+      "query": "Which of the following best describes the purpose of database normalization?",
+      "questionNumber": 2,
+      "options": [
+        {
+          "optionNumber": 1,
+          "optionQuery": "To eliminate data redundancy and improve data integrity"
+        },
+        {
+          "optionNumber": 2,
+          "optionQuery": "To create more tables for faster query performance"
+        },
+        {
+          "optionNumber": 3,
+          "optionQuery": "To make database design more complex"
+        }
+      ],
+      "displayType": "Descriptive",
+      "clo": "clo_sample_2",
+      "marks": 3,
+      "subQuestions": [
+        {
+          "_id": {
+            "$oid": "6682fb71c6c9f7b1b5d88a3c"
+          },
+          "question_id": {
+            "$oid": "686660b9bad2d2d895fe3a9e"
+          },
+          "subQuestionNumber": 1
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66b3d9f0c6a4b50f3f5d1a7e"
+      },
+      "isStandAlone": false,
+      "isParent": false,
+      "isSubQuestion": true,
+      "questionType": "MCQ",
+      "query": "Which of the following ER diagrams correctly represents a one-to-many relationship between Student and Enrolment?",
+      "questionNumber": 2,
+      "options": [
+        {
+          "optionNumber": 1,
+          "optionQuery": "image"
+        },
+        {
+          "optionNumber": 2,
+          "optionQuery": "image"
+        },
+        {
+          "optionNumber": 3,
+          "optionQuery": "image"
+        }
+      ],
+      "attachments": [
+        {
+          "attachmentNumber": 1,
+          "fileName": "sample1.jpg",
+          "filePath": "atachment/images/"
+        },
+        {
+          "attachmentNumber": 2,
+          "fileName": "sample2.jpg",
+          "filePath": "atachment/images/"
+        },
+        {
+          "attachmentNumber": 3,
+          "fileName": "sample3.jpg",
+          "filePath": "atachment/images/"
+        }
+      ],
+      "displayType": "Images",
+      "clo": "clo_sample_3",
+      "marks": 5,
+      "subQuestions": [
+        {
+          "_id": {
+            "$oid": "64f9c1a2b7d5f3a1c0e8d123"
+          },
+          "question_id": {
+            "$oid": "686660b9bad2d2d895fe3a9e"
+          },
+          "subQuestionNumber": 2
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "66b3f832c6a4b50f3f5d1b9e"
+      },
+      "isStandAlone": false,
+      "isParent": false,
+      "isSubQuestion": true,
+      "questionType": "Normal",
+      "query": "What are the advantages and disadvantages of using a relational database management system (RDBMS) in large-scale enterprise applications?",
+      "questionNumber": 2,
+      "displayType": "Descriptive",
+      "clo": "clo_sample_1",
+      "marks": 10,
+      "subQuestions": [
+        {
+          "_id": {
+            "$oid": "64f9c1a2b7d5f3a1c0e8d123"
+          },
+          "question_id": {
+            "$oid": "686660b9bad2d2d895fe3a9e"
+          },
+          "subQuestionNumber": 3
+        }
+      ]
+    }
+  ]
+}]
