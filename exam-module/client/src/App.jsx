@@ -1,17 +1,21 @@
-import { useState } from "react";
-import { Routes, Route } from 'react-router-dom'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+import './App.css';
+
+// import { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+
 import Header from "./components/Header";
 import Home from "./components/Home";
-import AllExams from './components/AllExams'
-import NewExam from './components/NewExam'
+import AllExams from "./components/ViewExams";
+import NewExam from "./components/NewExam";
 import Footer from "./components/Footer";
+import ViewExams from './components/ViewExams';
+
+const strTitle = "Title by Prop: ";
+// const location = useLocation();
+
+// useEffect()
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div className="d-flex flex-column min-vh-100">
@@ -22,11 +26,18 @@ function App() {
         </header>
         <main className="flex-grow-1 py-4">
           <div className="container">
-            {/* Routing here */}
+            {/* Routing */}
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/all-exams" element={<AllExams />} />
-              <Route path="/new-exam" element={<NewExam />} />
+              <Route path="/"
+              element={<Home title="Home" />} />
+              <Route
+                path="/view-exams"
+                element={<ViewExams title="View Exams" />}
+              />
+              <Route
+                path="/new-exam"
+                element={<NewExam title="New Exam" />}
+              />
             </Routes>
           </div>
         </main>

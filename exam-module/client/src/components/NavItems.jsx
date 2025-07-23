@@ -1,22 +1,30 @@
 // src/components/NavItems.jsx
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const NavItems = () => {
   return (
     <>
-      <li className="nav-item">
-        <Link className="nav-link" to="/">Home</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/all-exams">All Exams</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/new-exam">New Exam</Link>
-      </li>
+      <div className="collapse navbar-collapse" id="basic-navbar-nav">
+        <ul className="navbar-nav me-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/view-exams">
+              View Exams
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/new-exam">
+              New Exam
+            </Link>
+          </li>
 
-      {/* Optional dropdown example */}
-      {/*
+          {/* Optional dropdown example */}
+          {/*
       <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Dropdown
@@ -29,6 +37,8 @@ const NavItems = () => {
         </ul>
       </li>
       */}
+        </ul>
+      </div>
     </>
   );
 };

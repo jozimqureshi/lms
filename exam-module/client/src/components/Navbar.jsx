@@ -1,6 +1,8 @@
 // src/components/Navbar.jsx
-import React from 'react';
-import NavItems from './NavItems';
+import React from "react";
+// import { useEffect, useState } from "react";
+
+import NavItems from "./NavItems";
 
 const ReactBootNavbar = () => {
   return (
@@ -21,12 +23,7 @@ const ReactBootNavbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
-        <div className="collapse navbar-collapse" id="basic-navbar-nav">
-          <ul className="navbar-nav me-auto">
-            <NavItems />
-          </ul>
-        </div>
+        <NavItems />
       </div>
     </nav>
   );
