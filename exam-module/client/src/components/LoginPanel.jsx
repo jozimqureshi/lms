@@ -1,18 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 
-import Login from './Login';
-import Logout from './Logout';
-
-const loginUser = localStorage.getItem('username');
+import Login from "./Login";
+import Logout from "./Logout";
+import { AuthContext } from "../context/AuthContext";
 
 const ToggleLogin = () => {
-  return (
-    <>
-      {
-        loginUser ? <Login /> : <Logout />
-      }
-    </>
-  );
+  const { isLoggedIn } = useContext(AuthContext); // Calling Context - { } is the object destructuring
+
+  return <>{isLoggedIn ? <Login /> : <Logout />}</>;
 };
 
 export default ToggleLogin;
