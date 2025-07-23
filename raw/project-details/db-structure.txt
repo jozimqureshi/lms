@@ -6,6 +6,9 @@ Exam :  {
 	Subject
 	Question : {
 		_ID
+		isStandAlone
+		isParent
+		isSubQuestion
 		_Instruction_ID
 		Question Type -> Normal, MCQ
 		Query Name

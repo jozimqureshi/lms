@@ -45,6 +45,9 @@
           bsonType: 'object',
           required: [
             '_id',
+            'isStandAlone',
+            'isParent',
+            'isSubQuestion',
             'questionType',
             'query',
             'questionNumber',
@@ -56,6 +59,15 @@
             _id: {
               bsonType: 'objectId',
               description: 'Questions PK, ObjectId'
+            },
+            isStandAlone: {
+              bsonType: 'bool'
+            },
+            isParent: {
+              bsonType: 'bool'
+            },
+            isSubQuestion: {
+              bsonType: 'bool'
             },
             questionType: {
               bsonType: 'string',
@@ -82,7 +94,7 @@
                 ],
                 properties: {
                   optionNumber: {
-                    bsonType: 'string'
+                    bsonType: 'int'
                   },
                   optionQuery: {
                     bsonType: 'string'
