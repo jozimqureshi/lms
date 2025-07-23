@@ -1,13 +1,20 @@
 /* App.css */
 
-.link-underline-hover:hover {
-  text-decoration: underline;
+.link-underline {
+  text-decoration: underline !important;
 }
-
+.link-underline-none {
+  text-decoration: none !important;
+}
+.link-underline-hover:hover {
+  text-decoration: underline !important;
+}
+.link-underline-none-hover:hover {
+  text-decoration: none !important;
+}
 .cursor-pointer {
   cursor: pointer !important;
 }
-
 .select-custom {
   box-shadow: none !important;
   border-color: #ced4da !important;

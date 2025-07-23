@@ -2,6 +2,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Logout from "./Logout";
+
 const NavItems = () => {
   return (
     <>
@@ -38,6 +40,8 @@ const NavItems = () => {
       </li>
       */}
         </ul>
+        {/* Right Side Nav */}
+        <Logout /> {/* Slicing */}
       </div>
     </>
   );

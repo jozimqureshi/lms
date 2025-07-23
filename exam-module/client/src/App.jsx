@@ -9,6 +9,7 @@ import AllExams from "./components/ViewExams";
 import NewExam from "./components/NewExam";
 import Footer from "./components/Footer";
 import ViewExams from './components/ViewExams';
+import Welcome from './components/Welcome';
 
 const strTitle = "Title by Prop: ";
 // const location = useLocation();
@@ -21,17 +22,20 @@ function App() {
       <div className="d-flex flex-column min-vh-100">
         <header className="bg-light py-3">
           <div className="container">
-            <Header />
+            <Header /> {/* Slicing */}
           </div>
         </header>
         <main className="flex-grow-1 py-4">
           <div className="container">
+
+          <Welcome />
+
             {/* Routing */}
             <Routes>
               <Route path="/"
               element={<Home title="Home" />} />
               <Route
-                path="/view-exams"
+                path="/view-exams/*"
                 element={<ViewExams title="View Exams" />}
               />
               <Route
@@ -43,7 +47,7 @@ function App() {
         </main>
         <footer className="bg-dark text-white py-3 mt-auto">
           <div className="container text-center">
-            <Footer />
+            <Footer /> {/* Slicing */}
           </div>
         </footer>
       </div>
