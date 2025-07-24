@@ -1,4 +1,6 @@
+# All files and folders are listed here to ignore:
+
 backup/
-exam-module/
+# exam-module/
 lms-history/
 raw/
