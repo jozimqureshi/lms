@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useSearchParams} from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import AllFetchedViewExams from "./AllFetchedViewExams";
 import { allExams } from '../services/getAllExams';
 
-let examTypes;
+// const examTypes = (allExams) ? [...new Set(allExams.map((exam) => exam.examType))] : '';
 
-(allExams) ? examTypes = [...new Set(allExams.map((exam) => exam.examType))] : examTypes = '';
+const examsArray = Array.isArray(allExams) ? allExams : [allExams];
+const examTypes = examsArray.length
+  ? [...new Set(examsArray.map((exam) => exam.examType))]
+  : '';
 
 const ChooseExamTypes = (props) => {
+
+  console.log(`allExams = `, allExams);
+  console.log(`examTypes = `, examTypes);
+
   const [urlQuery, setUrlQuery] = useSearchParams(); // React uses useSearchParams to work with Query Strings
   // useSearchParams is similar to useState and can has setter. Both useState and selectedExamType may have skipped setter as well, depending on the requirement. Use setter when you want to change the state on change and if you require only to view the state and updating isn't required, you can skip the setter funciton.
 
@@ -17,7 +24,7 @@ const ChooseExamTypes = (props) => {
   // Keeping both below options to learn how many ways we can retrieve values from a variable using && and ||:
   // const [selectedExamType, setSelectedExamType] = useState((urlType && urlType !== "All") ? urlType : examTypes); // By default, selectedExamType = urlType or examTypes depending if it's All or selected type
   // const [selectedExamType, setSelectedExamType] = useState(urlType === "All" ? "All" : urlType || ""); // sets selectedExamType default value to "All" if it's All or any changed urlType or "" for falsy or null.
-  
+
   const [selectedExamType, setSelectedExamType] = useState(urlType || ""); // By default, selectedExamType = urlType if urlType is truly and "" on falsy.
   const [isAllSelected, setIsAllSelected] = useState(urlType === "All"); // By default, isAllSelected = false and only true when all is selected to keep maintaining history of state.
 
@@ -26,7 +33,7 @@ const ChooseExamTypes = (props) => {
 
     if (data === "All") {
       const encodedURL = `?type=${encodeURIComponent(data)}`; // not encodeURIComponent(`?type=${data}`); to avoid unnecessary encoding of ? like: "%3Ftype%3DMid%20Term"
-      
+
       // window.history.replaceState() is a method from the browser’s History API that allows you to change the URL in the address bar without reloading the page and without adding a new entry in the browser history.
       // Think of it like: “Stay on the same page, just rewrite the current URL silently.”
       // window.history.replaceState(stateObject, title, url);
@@ -54,7 +61,7 @@ const ChooseExamTypes = (props) => {
     } else {
       setSelectedExamType(data);
       setIsAllSelected(false);
-      setUrlQuery({type : value});
+      setUrlQuery({ type: value });
       window.history.replaceState(null, '', `?type=All`);
     }
   };
@@ -81,7 +88,7 @@ const ChooseExamTypes = (props) => {
                 {/* Showing All  */}
                 <option value="All">All</option>
                 {/* Showing individuals  */}
-                {examTypes.map((examType) => (
+                {examTypes && examTypes.map((examType) => (
                   <option key={examType} value={examType}>
                     {examType}
                   </option>

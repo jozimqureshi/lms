@@ -36,25 +36,25 @@ export const allExams = [
   {
     id: generateObjectId(),
     examName: "Computer Networks",
-    examType: "Mid Term",
+    examType: "Mid Term (2)",
     teacherId: "teacherId_2",
   },
   {
     id: generateObjectId(),
     examName: "Operating Systems",
-    examType: "Mid Term",
+    examType: "Mid Term (2)",
     teacherId: "teacherId_2",
   },
   {
     id: generateObjectId(),
     examName: "Cyber Security",
-    examType: "Final Term",
+    examType: "Final Term (2)",
     teacherId: "teacherId_2",
   },
   {
     id: generateObjectId(),
     examName: "Cloud Computing",
-    examType: "Final Term",
+    examType: "Final Term (2)",
     teacherId: "teacherId_2",
   },
 ];

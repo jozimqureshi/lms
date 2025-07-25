@@ -5,8 +5,11 @@ import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
 
-const isAuthenticated = localStorage.getItem('username');
-(isAuthenticated) ? children : <Navigate to = {'/'} replace />;  
+const username = localStorage.getItem('username');
+
+// console.log(`isAuthenticated = ${username}`);
+
+return (username) ? children : <Navigate to = {'/'} replace />;  
 }
 
 export default ProtectedRoute
