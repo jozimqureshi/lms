@@ -6,8 +6,10 @@ import { AuthContext } from "../context/AuthContext";
 
 const ToggleLogin = () => {
   const { isLoggedIn } = useContext(AuthContext); // Calling Context - { } is the object destructuring
-
-  return <>{isLoggedIn ? <Login /> : <Logout />}</>;
+  
+  // console.log("Logged In:", isLoggedIn);
+  
+  return <>{isLoggedIn ? <Logout /> : <Login />}</>;
 };
 
 export default ToggleLogin;

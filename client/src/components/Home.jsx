@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Login from "./LoginButton";
 
 const Home = (props) => {
   return (
@@ -12,7 +11,6 @@ const Home = (props) => {
           <h6>
             The work is under progress! New exciting features is coming soon!
           </h6>
-          <Login /> {/* Slicing */}
         </div>
       </div>
     </>

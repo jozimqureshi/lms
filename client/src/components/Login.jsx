@@ -1,20 +1,15 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
-import { mockCredential as provision, loginHandler } from "../services/login.js";
-import { AuthContext } from "../context/AuthContext.jsx";
+import { useLogin } from '../hooks/useLogin';
 
 const Login = () => {
-  const navigate = useNavigate();
-  const { setIsLoggedIn } = useContext(AuthContext);
+
+  const { performLogin } = useLogin();
 
   return (
     <>
-      <a className="nav-link link-underline link-underline-hover cursor-pointer"
-        onClick={() => {
-          loginHandler(provision(), navigate);
-          setIsLoggedIn(true); // It's same as literal vs premitive variable - setIsLoggedIn() is the reference of actual object created within AuthContext.
-        }}>
+      <a className="nav-link link-underline-none link-underline-hover cursor-pointer"
+        onClick={performLogin}>
         Login
       </a>
     </>

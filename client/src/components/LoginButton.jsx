@@ -1,30 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-import { mockCredential as provision, loginHandler } from "../services/login.js";
+import { useLogin } from '../hooks/useLogin';
 
-const Login = () => {
-  const navigate = useNavigate();
+const LoginButton = () => {
+  const { performLogin } = useLogin();
 
   return (
     <>
       <div className="row d-flex justify-content-center">
         <div className="col-7 text-center">
-          <form name="frmLogin" className="frmLogin" id="frmLogin">
-            <button
-              type="button"
-              name="btnLogin"
-              className="btnLogin"
-              id="btnLogin"
-              onClick={() => loginHandler(provision(), navigate)}
-            >
-              Login
-            </button>
-          </form>
+          <p>Please <a className="link-underline-none link-underline-hover cursor-pointer" onClick={performLogin}>Login</a> to proceed...</p>
         </div>
       </div>
     </>
   );
 };
 
-export default Login;
+export default LoginButton;

@@ -10,7 +10,7 @@ const Logout = () => {
 
   return (
     <>
-      <a className="nav-link link-underline link-underline-hover cursor-pointer"
+      <a className="nav-link link-underline-none link-underline-hover cursor-pointer"
         onClick={(e) => {
           logoutHandler(e, navigate);
           setIsLoggedIn(false);
