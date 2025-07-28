@@ -5,7 +5,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
-// import AllExams from "./components/ViewExams";
 import NewExam from "./components/NewExam";
 import Footer from "./components/Footer";
 import ViewExams from "./components/ViewExams";
@@ -13,9 +12,6 @@ import Welcome from "./components/Welcome";
 import ProtectedRoute from "./components/ProtectedRoute"; // To check authentication
 
 const strTitle = "Title by Prop: ";
-// const location = useLocation();
-
-// useEffect()
 
 function App() {
   return (

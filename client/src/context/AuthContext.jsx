@@ -10,7 +10,7 @@ const AuthProvider = ({children}) => {
       setIsLoggedIn(!!localStorage.getItem('username'));
     };
 
-    window.addEventListener("storage", handleStorage);
+    window.addEventListener("storage", handleStorage); // to manipulate outuer tab/window login status
 
     return () => window.removeEventListener("storage", handleStorage);
     
