@@ -1,7 +1,5 @@
-import { getIDs } from './getIDs';
-
-const teacherId = getIDs.teacherId;
-const teacherId_2 = getIDs.teacherId_2;
+const teacherId = localStorage.getItem("teacherId") || '';
+const teacherId_2 = localStorage.getItem("teacherId_2") || '';
 
 export const allTeachers = [
   {

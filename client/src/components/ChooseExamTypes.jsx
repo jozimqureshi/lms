@@ -13,8 +13,8 @@ const examTypes = examsArray.length
 
 const ChooseExamTypes = (props) => {
 
-  console.log(`allExams = `, allExams);
-  console.log(`examTypes = `, examTypes);
+  // console.log(`allExams = `, allExams);
+  // console.log(`examTypes = `, examTypes);
 
   const [urlQuery, setUrlQuery] = useSearchParams(); // React uses useSearchParams to work with Query Strings
   // useSearchParams is similar to useState and can has setter. Both useState and selectedExamType may have skipped setter as well, depending on the requirement. Use setter when you want to change the state on change and if you require only to view the state and updating isn't required, you can skip the setter funciton.

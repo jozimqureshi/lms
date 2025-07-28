@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 import { mockCredential as provision, loginHandler } from "../services/login.js";
 import { AuthContext } from "../context/AuthContext.jsx";
+import { storeMockIDs } from '../services/storeMockIDs.js';
 
 export const useLogin = () => {
     const navigate = useNavigate();
     const { setIsLoggedIn } = useContext(AuthContext);
 
     const performLogin = () => {
+        storeMockIDs(); // centrally storing all IDs to use in mock data and everywhrere else on clicking the Login Button
         loginHandler(provision(), navigate);
         setIsLoggedIn(true); // It's same as literal vs premitive variable
         // setIsLoggedIn() is the reference of actual object created within AuthContext.

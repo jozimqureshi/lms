@@ -1,33 +1,30 @@
-import { generateObjectId } from "../../utils/generateObjectId.js";
-import { getIDs } from "./getIDs.js";
+import { generateObjectId } from "../../utils/generateObjectId";
 
-const examId = getIDs.examId;
-const examId_2 = getIDs.examId_2;
-const teacherId = getIDs.teacherId;
-const teacherId_2 = getIDs.teacherId_2;
+const teacherId = localStorage.getItem("teacherId") || '';
+const teacherId_2 = localStorage.getItem("teacherId_2") || '';
 
 export const allExams = [
   // teacher_1:
   {
-    id: examId,
+    id: generateObjectId(),
     examName: "Database Management",
     examType: "Mid Term",
     teacherId, // FK -> ES 6 Shortcut of teacherId : teacherId
   },
   {
-    id: examId,
+    id: generateObjectId(),
     examName: "Artifical Intelligence",
     examType: "Mid Term",
     teacherId, // FK
   },
   {
-    id: examId,
+    id: generateObjectId(),
     examName: "Data Science",
     examType: "Final Term",
     teacherId, // FK
   },
   {
-    id: examId,
+    id: generateObjectId(),
     examName: "Machine Learning",
     examType: "Final Term",
     teacherId, // FK
