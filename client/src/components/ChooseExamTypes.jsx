@@ -61,7 +61,7 @@ const ChooseExamTypes = (props) => {
     } else {
       setSelectedExamType(data);
       setIsAllSelected(false);
-      setUrlQuery({ type: value });
+      setUrlQuery({ type: data });
       window.history.replaceState(null, '', `?type=All`);
     }
   };

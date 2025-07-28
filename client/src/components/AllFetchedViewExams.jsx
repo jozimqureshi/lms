@@ -68,7 +68,7 @@ const AllFetchedViewExams = (props) => {
               : exam.examType === examType
           )
           .map((exam) => (
-            <li key={exam.id}>
+            <li key={`${exam.id}-${exam.examType}-${Math.random()}`}>
               <a
                 className="nav-link link-underline-hover cursor-pointer"
                 onClick={() => handleExam(exam.id)} // Wrapping handleExam in an arrow function prevents it from running immediately during render; it will only be called when the user actually clicks.
